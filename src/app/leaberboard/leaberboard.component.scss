@@ -1,0 +1,11 @@
+.heading {
+  color: #ec8b8b;
+}
+.leader {
+  &-box {
+    background-color: #eda9a9;
+  }
+  &-border {
+    border-bottom: 1px solid #fff;
+  }
+}

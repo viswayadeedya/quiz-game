@@ -1,0 +1,37 @@
+<div class="grid quiz">
+  <div class="quiz-username col-12">Hello UserName</div>
+  <div class="quiz-start-text col-12">Let's start the Quiz Game</div>
+  <div class="quiz-instructions col-12">Instructions:</div>
+  <div class="col-12">Each question consists of 4 options.</div>
+  <div class="col-12">One question will be displayed at a time.</div>
+  <div class="col-12">Each correct answer contains 5 points</div>
+  <div class="col-12">
+    The user cannot go to the previous question once the exam has started.
+  </div>
+  <div class="col-12">
+    User has to be select an option in order to go next question.
+  </div>
+  <div class="col-12">
+    After completion of quiz the leader board will be displayed at last.
+  </div>
+</div>
+<div class="grid quiz-start-box">
+  <div class="col-12">
+    <p-checkbox
+      style="margin-right: 5px"
+      [(ngModel)]="checked"
+      [binary]="true"
+      inputId="binary"
+    ></p-checkbox>
+    <label for="binary">I have read the instructions carefully</label>
+  </div>
+  <div class="col-12 align-items-center">
+    <button
+      pButton
+      type="button"
+      label="Start"
+      [disabled]="!checked"
+      (click)="startQuiz()"
+    ></button>
+  </div>
+</div>

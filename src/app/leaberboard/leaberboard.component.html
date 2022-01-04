@@ -1,0 +1,31 @@
+<!-- <div *ngIf="scores">
+  <h1 class="text-center heading">ScoreBoard</h1>
+  <div class="leader-box grid">
+    <div class="col-6 leader-border">USERNAME</div>
+    <div class="col-6 leader-border">SCORE</div>
+</div>
+    <div class="grid">
+    <div *ngFor="let scores of scores" class="col-12">
+      <div class="col-6 leader-border">{{ scores.userName }}</div>
+      <div class="col-6 leader-border">{{ scores.score }}</div>
+      </div>
+    
+  </div>
+</div> -->
+<div *ngIf="scores">
+  <h1 class="text-center heading">ScoreBoard</h1>
+  <p-table [value]="scores" class="leader-box">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>USERNAME</th>
+        <th>SCORE</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-score>
+      <tr>
+        <td>{{ score.userName }}</td>
+        <td>{{ score.score }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

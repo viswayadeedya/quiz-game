@@ -1,0 +1,67 @@
+// VISWA YADEEDYA
+.login-page {
+  background-color: #eda9a9;
+  border-radius: 10px;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  &-button {
+    background-color: #eeeeee;
+    padding: 10px 25px;
+    color: #161853;
+    border-radius: 13px;
+    font-size: 1.05rem;
+    cursor: pointer;
+  }
+  &-button:enabled:hover {
+    background: #eeeeee;
+    color: #000;
+    border-color: #eeeeee;
+  }
+  &-button-1 {
+    background-color: #eeeeee;
+    border-radius: 13px;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+    color: #000;
+  }
+  &-button-1:enabled:hover {
+    background: #eeeeee;
+    color: #000;
+    border-color: #eeeeee;
+  }
+
+  &-button-box {
+    text-align: center;
+    padding: 15px 10px 15px;
+  }
+
+  &-box {
+    padding: 0.8rem;
+  }
+
+  &-name {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 8rem;
+    border-bottom: 1px solid #fff;
+  }
+  &-text {
+    font-size: 1.25rem;
+    padding: 5px;
+  }
+  &-input {
+    width: -webkit-fill-available;
+    padding: 9px;
+    margin: 5px;
+  }
+  &-button-box-1 {
+    text-align: center;
+    padding-bottom: 7px;
+  }
+}

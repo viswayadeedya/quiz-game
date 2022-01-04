@@ -1,0 +1,51 @@
+<!-- VISWA YADEEDYA -->
+<div class="login-page">
+  <div class="login-page-name">Quiz App</div>
+  <div class="login-page-box">
+    <div *ngIf="!isLogin">
+      <div class="login-page-text">Username</div>
+      <input
+        class="login-page-input"
+        type="text"
+        pInputText
+        placeholder="Enter your Username"
+        [(ngModel)]="userName"
+      />
+    </div>
+    <div class="login-page-text">Email</div>
+    <input
+      class="login-page-input"
+      type="text"
+      placeholder="Enter your EmailID"
+      pInputText
+      [(ngModel)]="emailId"
+    />
+    <div class="login-page-text">Password</div>
+    <input
+      class="login-page-input"
+      type="password"
+      placeholder="Enter your Password"
+      pPassword
+      [(ngModel)]="password"
+    />
+    <div class="login-page-button-box">
+      <button
+        class="login-page-button"
+        pButton
+        type="button"
+        [label]="text"
+        (click)="goToHome()"
+      ></button>
+    </div>
+    <div class="login-page-button-box-1">
+      {{ memberText }}
+      <button
+        class="login-page-button-1"
+        pButton
+        type="button"
+        (click)="onClick()"
+        [label]="text1"
+      ></button>
+    </div>
+  </div>
+</div>

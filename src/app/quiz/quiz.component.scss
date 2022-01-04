@@ -1,0 +1,19 @@
+.quiz {
+  word-spacing: 2px;
+  padding-left: 1rem;
+  &-username {
+    padding-top: 3rem;
+    font-size: 2rem;
+    color: #161853;
+  }
+  &-start-text {
+    font-size: 1.25rem;
+  }
+  &-instructions {
+    font-size: 1.15rem;
+    font-weight: bold;
+  }
+  &-start-box {
+    padding: 3rem 0 0 1.4rem;
+  }
+}

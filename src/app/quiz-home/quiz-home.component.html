@@ -1,0 +1,53 @@
+<div *ngIf="questions.length != 0 && i !== 5">
+  <div class="grid justify-content-center align-content-center">
+    <div class="quiz-question col-12 text-center">
+      {{ i + 1 }}. {{ questions[i].question }}
+    </div>
+    <div class="col-12 text-center quiz-option-box">
+      <span
+        class="quiz-options text-center"
+        #a
+        (click)="checkAns(a.innerText, a)"
+        (click)="correctCheck(a, b, c, d)"
+        >{{ questions[i].options[0] }}</span
+      >
+    </div>
+    <div class="col-12 text-center quiz-option-box">
+      <span
+        class="quiz-options text-center"
+        #b
+        (click)="checkAns(b.innerText, b)"
+        (click)="correctCheck(a, b, c, d)"
+        >{{ questions[i].options[1] }}</span
+      >
+    </div>
+    <div class="col-12 text-center quiz-option-box">
+      <span
+        class="quiz-options text-center"
+        #c
+        (click)="checkAns(c.innerText, c)"
+        (click)="correctCheck(a, b, c, d)"
+        >{{ questions[i].options[2] }}</span
+      >
+    </div>
+    <div class="col-12 text-center quiz-option-box">
+      <span
+        #d
+        class="quiz-options text-center"
+        (click)="checkAns(d.innerText, d)"
+        (click)="correctCheck(a, b, c, d)"
+        >{{ questions[i].options[3] }}</span
+      >
+    </div>
+  </div>
+  <div class="text-center quiz-button-box">
+    <button
+      pButton
+      type="button"
+      [disabled]="!enable"
+      class="p-button-rounded quiz-button-next"
+      label="Next Question"
+      (click)="nextQuestion(a, b, c, d)"
+    ></button>
+  </div>
+</div>
